@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-dmnp+7qd(&iqjfi2_vce$m)ko@1=73*n-ndt-&mk*zzyu0pwua
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'simplechat',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

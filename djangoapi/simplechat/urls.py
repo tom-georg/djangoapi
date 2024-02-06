@@ -17,11 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
-# import include
-from django.urls import include
+from .views import ChatBeitragViewSet
+
+router = routers.DefaultRouter()
+router.register(r'beitraege', ChatBeitragViewSet)
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('simplechat/', include('simplechat.urls')),
+   
 ]
 
+urlpatterns += router.urls
