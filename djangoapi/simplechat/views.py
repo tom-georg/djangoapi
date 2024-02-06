@@ -8,7 +8,7 @@ class ChatBeitragSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ChatBeitrag
         fields = ['username', 'text', 'created_at', 'updated_at']
-        #read_only_fields = ['created_at', 'updated_at']
+        read_only_fields = ['created_at', 'updated_at']
 
 
 class ChatBeitragViewSet(viewsets.ModelViewSet):
@@ -19,15 +19,5 @@ class ChatBeitragViewSet(viewsets.ModelViewSet):
     serializer_class = ChatBeitragSerializer
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ['url', 'username', 'email', 'groups']
-
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ['url', 'name']
 
 

@@ -1,3 +1,4 @@
+from collections.abc import Iterable
 from django.db import models
 
 
@@ -11,3 +12,4 @@ class ChatBeitrag(models.Model):
     class Meta:
         db_table = 'chat_beitrag'
         ordering = ['-created_at']
+
